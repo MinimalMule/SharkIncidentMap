@@ -1,7 +1,21 @@
 <!DOCTYPE html>
+
+<link 
+  rel="stylesheet" 
+  type="text/css" 
+  href="https://unpkg.com/globeletjs@<VERSION>/dist/globelet.css">
+
 <html>
     <body>
 
     </body>
-	<script type="module" src="./sharkmap.js"></script>
+	<script type="javascript">
+	import * as globeletjs from "https://unpkg.com/globeletjs@latest/dist/globelet.js";
+const params = { container: 'globe',
+style: "./klokantech-basic-style-geojson.json",
+center: [-100, 38.5],
+altitude: 6280,
+};
+const globePromise = globeletjs.initGlobe(params);
+	</script>
 </html>
