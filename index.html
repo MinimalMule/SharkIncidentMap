@@ -46,7 +46,7 @@
 						var marker = L.marker([latitude,longitude]).addTo(map)
 						
 						if (injury = "fatal") {
-							marker._icon.classList.add("huechange");
+							marker._icon.style.filter = "hue-rotate(120deg)"
 						}
 												
 					} 
