@@ -10,10 +10,11 @@
 		<div id="globe" class="globelet">
 			<div class="main">
 				<canvas class="map"></canvas>
+				<div class="status"></div>
 			</div>
+			<div class="infoslider"></div>
 		</div>
-    </body>
-	<script type="module">
+			<script type="module">
 	import * as globeletjs from "https://unpkg.com/globeletjs@latest/dist/globelet.js";
 const params = { container: 'globe',
 style: "./style.json",
@@ -22,4 +23,5 @@ altitude: 6280,
 };
 const globePromise = globeletjs.initGlobe(params);
 	</script>
+    </body>
 </html>
