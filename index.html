@@ -25,14 +25,16 @@
 				};
 			const globePromise = globeletjs.initGlobe(params);
 			
-			
+			//open the text file
 			fetch('./sharklocdat.txt')
 				.then(response => {
+					// send an error if there's a problem
 					if (!response.ok) {
 						throw new Error(`HTTP error! Status: ${response.status}`);
 					}
 					return response.text();
 				})
+				// if there's no problem then read line by line
 				.then(textContent => {
 					// get the text.
 					const parsedString = textContent.split('\n').map((line) => line.split('\t'));
@@ -46,17 +48,17 @@
 						longitude = parsedString[i][7];
 						sharkType = parsedString[i][8];
 						
+						// spit out the output to the console so that we can check
 						console.log("Day: %s, Month: %s, Year: %s, Injury: %s, Latitude: %s, Longitude: %s, Shark Type: %s ", day, month, year, injury, latitude, longitude, sharkType);
 					} 
 
 					})
 					.catch(error => {
+						// catch errors
 						console.error('Fetch error:', error);
 					});
 
 			};
-			reader.readAsText("./sharklocdat.txt");
-			// gets all of the text, splits it up by line breaks, and then splits it up by tabs
 			
 		</script>
     </body>
