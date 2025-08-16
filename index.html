@@ -25,6 +25,8 @@
 				};
 			const globePromise = globeletjs.initGlobe(params);
 			
+			globe.startAnimation()
+			
 			//open the text file
 			fetch('./sharklocdat.txt')
 				.then(response => {
@@ -47,6 +49,12 @@
 						var latitude = parsedString[i][6];
 						var longitude = parsedString[i][7];
 						var sharkType = parsedString[i][8];
+						
+
+						const options = {position = [latitude, longitude]}
+						
+						const marker = globeAPI.addMarker(options);
+							
 						
 						// spit out the output to the console so that we can check
 						console.log("Day: %s, Month: %s, Year: %s, Injury: %s, Latitude: %s, Longitude: %s, Shark Type: %s ", day, month, year, injury, latitude, longitude, sharkType);
