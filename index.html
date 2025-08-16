@@ -7,17 +7,60 @@
   type="text/css" 
   href="https://unpkg.com/globeletjs@latest/dist/globelet.css">
 <link rel="stylesheet" type="text/css" href="styles.css">
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
 </head>
     <body>
+		<div id="map"></div>
 		<div id="globe" class="globelet">
 			<div class="main">
 				<canvas class="map"></canvas>
 				<div class="status"></div>
 			</div>
 			<div class="infoslider"></div>
+			
+			
 		</div>
+		 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+		<script type="javascript">
+			var map = L.map('map').setView([51.505, -0.09], 13);
+			
+			fetch('./sharklocdat.txt')
+				.then(response => {
+					// send an error if there's a problem
+					if (!response.ok) {
+						throw new Error(`HTTP error! Status: ${response.status}`);
+					}
+					return response.text();
+				})
+				// if there's no problem then read line by line
+				.then(textContent => {
+					// get the text.
+					const parsedString = textContent.split('\n').map((line) => line.split('\t'));
+				
+					for (let i = 1; i < parsedString.length; i++) {
+						var day = parsedString[i][0];
+						var month = parsedString[i][1];
+						var year = parsedString[i][2];
+						var injury = parsedString[i][3];
+						var latitude = parsedString[i][6];
+						var longitude = parsedString[i][7];
+						var sharkType = parsedString[i][8];
+					
+						L.marker([latitude,longitude]).addTo(map)
+					} 
+
+					})
+					.catch(error => {
+						// catch errors
+						console.error('Fetch error:', error);
+					});		
+		</script>
 		<script type="module">
-			import * as globeletjs from "https://unpkg.com/globeletjs@latest/dist/globelet.js";
+		/*	import * as globeletjs from "https://unpkg.com/globeletjs@latest/dist/globelet.js";
 			const params = { container: 'globe',
 				style: "./style2.json",
 				center: [-100, 38.5],
@@ -71,7 +114,7 @@
 					});		
 			  
 			});
-			
+			*/
 
 		</script>
     </body>
