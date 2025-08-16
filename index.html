@@ -16,14 +16,22 @@
 			</div>
 			<div class="infoslider"></div>
 		</div>
-			<script type="module">
-	import * as globeletjs from "https://unpkg.com/globeletjs@latest/dist/globelet.js";
-const params = { container: 'globe',
-style: "./style2.json",
-center: [-100, 38.5],
-altitude: 6280,
-};
-const globePromise = globeletjs.initGlobe(params);
-	</script>
+		<script type="module">
+			import * as globeletjs from "https://unpkg.com/globeletjs@latest/dist/globelet.js";
+			const params = { container: 'globe',
+				style: "./style2.json",
+				center: [-100, 38.5],
+				altitude: 6280,
+				};
+			const globePromise = globeletjs.initGlobe(params);
+			
+			var reader = new FileReader();
+			reader.onload = function(event) {
+				console.log('File content:', event.target.result);
+			};
+			reader.readAsText(./sharklocdat.txt);
+			// gets all of the text, splits it up by line breaks, and then splits it up by tabs
+			//const parsedString = tabbedString.split('\n').map((line) => line.split('\t')); 
+		</script>
     </body>
 </html>
