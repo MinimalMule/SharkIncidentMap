@@ -25,11 +25,12 @@
 				};
 			const globePromise = globeletjs.initGlobe(params);
 
-			globePromise.then(globeAPI => {
-			  globeAPI.startAnimation();
+			globePromise.then(globe => {
+			  globe.startAnimation();
 
 			  // ...etc. Do more things with globeAPI here...
 			  
+
 			  			//open the text file
 			fetch('./sharklocdat.txt')
 				.then(response => {
@@ -56,7 +57,7 @@
 
 						const options = {position: [latitude, longitude]}
 						
-						const marker = globeAPI.addMarker(options);
+						const marker = globe.addMarker(options);
 							
 						
 						// spit out the output to the console so that we can check
