@@ -1194,12 +1194,4 @@ Incident.day	Incident.month	Incident.year	Victim.injury	State	Location	Latitude	
 6	2	2022	injured	WA	"wylie bay, esperance"	-33.84848Ê	121.9184	white shark	3.3	unprovoked	1	other:floating	torso	major lacerations	female	20	1200
 20	2	2022	injured	NSW	"shelley beach, manly"	-33.8006	151.2982	wobbegong		unprovoked	1	scuba diving					
 22	3	2022	injured	NSW	crowdy head beach	-32	152.7512	wobbegong		unprovoked	1	wading	minor lacerations	male	32	swimwear	
-8	3	2022	uninjured	NSW	"maroubra beach, sydney"	-33.9516	151.2603	unknown		unprovoked		surfing		male	47	swimwear	
-																	
-																	
-																	
-																	
-																	
-																	
-																	
-																	
+8	3	2022	uninjured	NSW	"maroubra beach, sydney"	-33.9516	151.2603	unknown		unprovoked		surfing		male	47	swimwear
