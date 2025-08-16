@@ -1102,7 +1102,7 @@ Incident.day	Incident.month	Incident.year	Victim.injury	State	Location	Latitude	
 9	12	2018	injured	NSW	"the bar, nambucca river entrance"	-30.643181	153.008839			unprovoked							
 15	12	2018	injured	NSW	"the entrance, gosford"	-33.425018	151.342224	wobbeogong	1.0	provoked	1.00	swimming	left foot	minor lacerations	male	68	1100
 14	1	2019	injured	WA	north cottesloe	-31.989	115.7526	wobbegong		unprovoked	1	swimming	foot	minor lacerations	female	15	1130
-	2	2019	uninjured	WA		-33.6702	114.9951	white shark		provoked	1	spearfishing			male	27	
+1	2	2019	uninjured	WA		-33.6702	114.9951	white shark		provoked	1	spearfishing			male	27	
 4	2	2019	uninjured	NSW		-30.452	152.8979			unprovoked	1	boarding			male	50	615
 11	2	2019	injured	NT	umbakumba - 12 km out to sea	-13.8611	136.8116	whitetip reef shark		provoked	1						
 17	2	2019	injured	NSW	"belongil beach, byron bay"	-28.6337	153.6003	white shark		unprovoked	1	boarding	leg	major lacerations	male	41	0640
