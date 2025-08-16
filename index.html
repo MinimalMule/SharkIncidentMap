@@ -40,13 +40,13 @@
 					const parsedString = textContent.split('\n').map((line) => line.split('\t'));
 				
 					for (let i = 1; i < parsedString.length; i++) {
-						day = parsedString[i][0];
-						month = parsedString[i][1];
-						year = parsedString[i][2];
-						injury = parsedString[i][3];
-						latitude = parsedString[i][6];
-						longitude = parsedString[i][7];
-						sharkType = parsedString[i][8];
+						var day = parsedString[i][0];
+						var month = parsedString[i][1];
+						var year = parsedString[i][2];
+						var injury = parsedString[i][3];
+						var latitude = parsedString[i][6];
+						var longitude = parsedString[i][7];
+						var sharkType = parsedString[i][8];
 						
 						// spit out the output to the console so that we can check
 						console.log("Day: %s, Month: %s, Year: %s, Injury: %s, Latitude: %s, Longitude: %s, Shark Type: %s ", day, month, year, injury, latitude, longitude, sharkType);
