@@ -24,8 +24,8 @@
 				altitude: 6280,
 				};
 			const globePromise = globeletjs.initGlobe(params);
-			
-			globe.startAnimation()
+
+			globePromise.startAnimation()
 			
 			//open the text file
 			fetch('./sharklocdat.txt')
