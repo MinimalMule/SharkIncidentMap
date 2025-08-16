@@ -39,6 +39,8 @@
 						var sharkType = parsedString[i][8];
 					
 						L.marker([latitude,longitude]).addTo(map)
+						
+						console.log("Day: %s, Month: %s, Year: %s, Injury: %s, Latitude: %s, Longitude: %s, Shark Type: %s ", day, month, year, injury, latitude, longitude, sharkType);
 					} 
 
 					})
