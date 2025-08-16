@@ -33,13 +33,6 @@
     "composite": {
       "url": "mapbox://mapbox.mapbox-terrain-v2,mapbox.mapbox-streets-v7",
       "type": "vector"
-    },
-    "mountains": {
-      "type": "geojson",
-      "data": "./ne_10m_elevation_points.json",
-      "minzoom": 0,
-      "maxzoom": 14,
-      "tileSize": 512
     }
   },
   "sprite": "mapbox://sprites/mapbox/outdoors-v10",
