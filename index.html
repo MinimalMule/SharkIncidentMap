@@ -25,13 +25,39 @@
 				};
 			const globePromise = globeletjs.initGlobe(params);
 			
-			var reader = new FileReader();
-			reader.onload = function(event) {
-				console.log('File content:', event.target.result);
+			
+			fetch('./sharklocdat.txt')
+				.then(response => {
+					if (!response.ok) {
+						throw new Error(`HTTP error! Status: ${response.status}`);
+					}
+					return response.text();
+				})
+				.then(textContent => {
+					// get the text.
+					const parsedString = textContent.split('\n').map((line) => line.split('\t'));
+				
+					for (let i = 1; i < parsedString.length; i++) {
+						day = parsedString[i][0];
+						month = parsedString[i][1];
+						year = parsedString[i][2];
+						injury = parsedString[i][3];
+						latitude = parsedString[i][6];
+						longitude = parsedString[i][7];
+						sharkType = parsedString[i][8];
+						
+						console.log("Day: %s, Month: %s, Year: %s, Injury: %s, Latitude: %s, Longitude: %s, Shark Type: %s ", day, month, year, injury, latitude, longitude, sharkType);
+					} 
+
+					})
+					.catch(error => {
+						console.error('Fetch error:', error);
+					});
+
 			};
 			reader.readAsText("./sharklocdat.txt");
 			// gets all of the text, splits it up by line breaks, and then splits it up by tabs
-			//const parsedString = tabbedString.split('\n').map((line) => line.split('\t')); 
+			
 		</script>
     </body>
 </html>
