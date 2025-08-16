@@ -23,9 +23,9 @@
 				center: [-100, 38.5],
 				altitude: 6280,
 				};
-			const globePromise = globeletjs.initGlobe(params);
+			globe = globeletjs.initGlobe(params);
 
-			globePromise.startAnimation();
+			globe.startAnimation();
 			
 			//open the text file
 			fetch('./sharklocdat.txt')
