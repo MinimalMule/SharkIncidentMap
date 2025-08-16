@@ -14,7 +14,7 @@
      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
      crossorigin=""></script>
 		<script type="javascript">
-			var map = L.map('map').setView([51.505, -0.09], 13);
+			const map = L.map('map').setView([51.505, -0.09], 13);
 			
 			fetch('./sharklocdat.txt')
 				.then(response => {
